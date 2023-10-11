@@ -1,0 +1,5 @@
+FROM golang:go.1.21.0
+WORKDIR /go/src/api-gateway
+COPY . .
+RUN go build -o bin/server cmd/main.go
+CMD [".bin/server"]

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package userQuery;
+
+option go_package = "./";
+
+service UserQueryService {
+  rpc UserLogin (UserLoginRequest) returns (UserLoginResponse) {}
+  // rpc GetUser (GetUserRequest) returns (GetUserResponse) {}
+  // rpc GetUsers (GetUsersRequest) returns (GetUsersResponse) {}
+}
+
+message UserLoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message UserLoginResponse {
+  string email = 1;
+  string username = 2;
+  repeated string error = 3;
+}

@@ -1,0 +1,6 @@
+*.env
+!.env
+!.docker.env
+bin
+vendor
+.idea

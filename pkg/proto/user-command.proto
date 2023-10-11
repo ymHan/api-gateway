@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package userQuery;
+
+option go_package="./";
+
+service UserCommandService {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
+}
+
+message CreateUserRequest {
+  string email = 1;
+  string username = 2;
+  string password = 3;
+  string created_at = 4;
+}
+
+message CreateUserResponse {
+  int32 status = 1;
+  repeated string error = 2;
+}
+
+message UpdateUserRequest {
+  string email = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message UpdateUserResponse {
+  int32 status = 1;
+  repeated string error = 2;
+}
