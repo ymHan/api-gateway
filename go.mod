@@ -1,11 +1,11 @@
-module api-gateway
+module github.com/ymHan/api-gateway
 
 go 1.21.0
 
 require (
 	github.com/gofiber/fiber/v2 v2.49.2
 	github.com/spf13/viper v1.17.0
-	google.golang.org/grpc v1.58.2
+	google.golang.org/grpc v1.58.3
 	google.golang.org/protobuf v1.31.0
 )
 
